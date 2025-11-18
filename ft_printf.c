@@ -12,7 +12,15 @@ int ft_convert(const char str,va_list args)
         nprinted += ft_putstr(va_arg(args,char *));
     else if (str == 'p')
         nprinted += ft_putptr(va_arg(args,uintptr_t));
-
+    else if (str == 'd' || str == 'i')
+        nprinted += ft_putnbr(va_arg(args,int));
+    else if (str == 'u')
+        nprinted += ft_putunsigned(va_arg(args, unsigned int));
+    else if (str == 'x' || str == 'X')
+        nprinted += ft_puthex(va_arg(args, unsigned int),str);
+    else if (str == '%')
+        nprinted += ft_putchar('%');
+    return (nprinted);
 }
 
 
