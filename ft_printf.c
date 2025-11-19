@@ -1,5 +1,4 @@
-#include <stdarg.h>
-#include <stdint.h>
+#include "printf.h"
 
 int ft_convert(const char str,va_list args)
 {
