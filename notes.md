@@ -33,3 +33,21 @@
 # 4 :
 	Once the first variable argument has been written, you go back to step 1, until the string is finished (aka, until you find a null character (\0)).
 	
+
+## definitions:
+	- **uintptr_t** :  is an unsigned integer type defined in the <cstdint> header (or <stdint.h> in C). Its purpose is to provide an integer type that is guaranteed to be large enough to hold the value of any data pointer.
+	When to use uintptr_t:
+			- Storing Pointers as Integers: When you need to store a pointer value in an integer type, for example, in data structures or for serialization.
+			- Pointer Hashing: When generating hash values based on memory addresses.
+			- Interfacing with APIs: When interacting with low-level APIs or hardware that expect memory addresses as integer values.
+
+
+
+questions;'
+
+va_list struct 
+va_arg how does it read
+va_start 
+registre 
+stack save_area 
+	

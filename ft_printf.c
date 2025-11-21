@@ -36,12 +36,12 @@ int ft_printf(const char * str, ...)
     {
         if (str[i] == '%')
         {
-            nprinted += ft_convert(str[i],args);
+            nprinted += ft_convert(str[i+1],args);
             i++;
         }
+	else if (str[i] == '%' && str[i + 1] == '\0')
+		return (-1);
         else
-        {
             nprinted += ft_putchar(str[i]);
-        }
     }
 }
